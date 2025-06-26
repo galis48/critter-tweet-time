@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Cat } from 'lucide-react';
 import Header from '@/components/Header';
 import TweetComposer from '@/components/TweetComposer';
 import TweetCard from '@/components/TweetCard';
