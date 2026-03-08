@@ -61,7 +61,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 dark:from-background dark:to-background">
       <Header />
       <main className="container mx-auto px-4 py-8 max-w-2xl">
         <TweetComposer onTweet={addTweet} />
