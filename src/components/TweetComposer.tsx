@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -20,9 +19,9 @@ const TweetComposer: React.FC<TweetComposerProps> = ({ onTweet }) => {
   };
 
   return (
-    <Card className="mb-6 bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200">
+    <Card className="mb-6 bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-950 dark:to-amber-950 border-orange-200 dark:border-orange-800">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2 text-orange-800">
+        <CardTitle className="flex items-center gap-2 text-orange-800 dark:text-orange-300">
           <Cat className="h-5 w-5" />
           מה עובר לך בראש על חיות המחמד?
         </CardTitle>
@@ -32,17 +31,17 @@ const TweetComposer: React.FC<TweetComposerProps> = ({ onTweet }) => {
           value={content}
           onChange={(e) => setContent(e.target.value)}
           placeholder="שתף את המחשבות שלך על חיות מחמד..."
-          className="mb-4 min-h-[100px] border-orange-200 focus:border-orange-400"
+          className="mb-4 min-h-[100px] border-orange-200 dark:border-orange-800 focus:border-orange-400"
           maxLength={280}
         />
         <div className="flex justify-between items-center">
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-muted-foreground">
             {content.length}/280
           </span>
           <Button 
             onClick={handleSubmit}
             disabled={!content.trim()}
-            className="bg-orange-500 hover:bg-orange-600 text-white"
+            className="bg-orange-500 hover:bg-orange-600 dark:bg-orange-600 dark:hover:bg-orange-700 text-white"
           >
             פרסם ציוץ
           </Button>

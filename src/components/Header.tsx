@@ -1,15 +1,21 @@
-
 import React from 'react';
 import { Cat, Dog } from 'lucide-react';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-lg">
+    <header className="bg-gradient-to-r from-orange-500 to-amber-500 dark:from-orange-800 dark:to-amber-800 text-white shadow-lg">
       <div className="container mx-auto px-4 py-6">
-        <div className="flex items-center justify-center gap-3">
-          <Cat className="h-8 w-8" />
-          <h1 className="text-3xl font-bold">פט טוויטר</h1>
-          <Dog className="h-8 w-8" />
+        <div className="flex items-center justify-between">
+          <div className="flex-1" />
+          <div className="flex items-center gap-3">
+            <Cat className="h-8 w-8" />
+            <h1 className="text-3xl font-bold">פט טוויטר</h1>
+            <Dog className="h-8 w-8" />
+          </div>
+          <div className="flex-1 flex justify-end">
+            <ThemeToggle />
+          </div>
         </div>
         <p className="text-center mt-2 text-orange-100">
           המקום לשתף את האהבה שלכם לחיות מחמד
