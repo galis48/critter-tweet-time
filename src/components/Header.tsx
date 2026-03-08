@@ -1,5 +1,6 @@
 import React from 'react';
-import { PawPrint, LogOut } from 'lucide-react';
+import { PawPrint, LogOut, UserPen } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import ThemeToggle from '@/components/ThemeToggle';
