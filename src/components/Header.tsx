@@ -10,6 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 const Header: React.FC = () => {
   const { user, logout } = useAuth();
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleLogout = async () => {
     await logout();
