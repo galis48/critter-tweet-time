@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dog } from 'lucide-react';
@@ -28,7 +27,7 @@ const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
   };
 
   return (
-    <Card className="mb-4 hover:shadow-md transition-shadow duration-200 border-amber-200">
+    <Card className="mb-4 hover:shadow-md transition-shadow duration-200 border-amber-200 dark:border-amber-800 dark:bg-card">
       <CardContent className="p-4">
         <div className="flex items-start gap-3">
           <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
@@ -36,12 +35,12 @@ const TweetCard: React.FC<TweetCardProps> = ({ tweet }) => {
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
-              <span className="font-medium text-gray-900">חובב חיות</span>
-              <span className="text-gray-500 text-sm">
+              <span className="font-medium text-foreground">חובב חיות</span>
+              <span className="text-muted-foreground text-sm">
                 {formatTime(tweet.timestamp)}
               </span>
             </div>
-            <p className="text-gray-800 leading-relaxed whitespace-pre-wrap">
+            <p className="text-foreground leading-relaxed whitespace-pre-wrap">
               {tweet.content}
             </p>
           </div>

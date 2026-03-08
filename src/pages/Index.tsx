@@ -81,8 +81,8 @@ const Index = () => {
         </div>
       </main>
       
-      <footer className="bg-orange-100 text-center py-6 mt-12">
-        <p className="text-orange-800">
+      <footer className="bg-orange-100 dark:bg-orange-950 text-center py-6 mt-12">
+        <p className="text-orange-800 dark:text-orange-300">
           נבנה באהבה לחיות המחמד 🐾
         </p>
       </footer>
