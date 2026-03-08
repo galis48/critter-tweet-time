@@ -38,11 +38,14 @@ const Header: React.FC = () => {
           <div className="flex items-center gap-2">
             {user && (
               <div className="flex items-center gap-2">
-                <Avatar className="h-8 w-8 border-2 border-white/30">
+                <Avatar className="h-8 w-8 border-2 border-white/30 cursor-pointer" onClick={() => navigate('/profile')}>
                   <AvatarImage src={user.photoURL || undefined} />
                   <AvatarFallback className="bg-orange-700 text-white text-xs">{initials}</AvatarFallback>
                 </Avatar>
                 <span className="text-sm font-medium hidden sm:inline">{user.displayName || user.email}</span>
+                <Button variant="ghost" size="icon" onClick={() => navigate('/profile')} className="text-white hover:bg-white/20 h-8 w-8">
+                  <UserPen className="h-4 w-4" />
+                </Button>
                 <Button variant="ghost" size="icon" onClick={handleLogout} className="text-white hover:bg-white/20 h-8 w-8">
                   <LogOut className="h-4 w-4" />
                 </Button>
